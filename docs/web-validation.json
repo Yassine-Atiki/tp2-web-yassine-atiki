@@ -1,0 +1,106 @@
+{
+  "started_at": "2026-11-10T12:13:58.946676+00:00",
+  "base_url": "http://localhost:8080/tp2-web-yassine-atiki/",
+  "method": "Sequential HTTP requests to the real JSF form, with cookies and ViewState retained in memory only.",
+  "llm_submissions": 5,
+  "results": [
+    {
+      "test": "initial_empty_view",
+      "passed": true,
+      "selected_role": "Assistant",
+      "role_menu_enabled": true,
+      "duration_seconds": 2.192
+    },
+    {
+      "test": "empty_question_rejected",
+      "passed": true,
+      "displayed_validation": "Il manque le texte de la question.",
+      "response_empty": true,
+      "conversation_empty": true,
+      "provider_call": "No call expected: backing bean returns before LlmClient for blank text.",
+      "duration_seconds": 2.157
+    },
+    {
+      "test": "translator_bonjour",
+      "passed": true,
+      "role": "Traducteur",
+      "question": "bonjour",
+      "response": "Hello",
+      "conversation": "== User:\nbonjour\n== Gemini:\nHello\n",
+      "role_menu_disabled": true,
+      "duration_seconds": 6.235
+    },
+    {
+      "test": "new_chat_after_translation",
+      "passed": true,
+      "selected_role": "Assistant",
+      "role_menu_enabled": true,
+      "question_empty": true,
+      "response_empty": true,
+      "conversation_empty": true,
+      "duration_seconds": 4.088
+    },
+    {
+      "test": "remember_marker",
+      "passed": true,
+      "role": "Assistant",
+      "question": "Mémorise ce repère fictif pour notre conversation : AZUR-CEDRE-47. Réponds simplement que tu l’as mémorisé.",
+      "response": "C'est mémorisé : AZUR-CEDRE-47.",
+      "conversation": "== User:\nMémorise ce repère fictif pour notre conversation : AZUR-CEDRE-47. Réponds simplement que tu l’as mémorisé.\n== Gemini:\nC'est mémorisé : AZUR-CEDRE-47.\n",
+      "role_menu_disabled": true,
+      "duration_seconds": 2.915
+    },
+    {
+      "test": "recall_same_view",
+      "passed": true,
+      "role": null,
+      "question": "Quel est le repère fictif que je viens de te donner ?",
+      "response": "Le repère fictif que tu m'as donné est : AZUR-CEDRE-47.",
+      "conversation": "== User:\nMémorise ce repère fictif pour notre conversation : AZUR-CEDRE-47. Réponds simplement que tu l’as mémorisé.\n== Gemini:\nC'est mémorisé : AZUR-CEDRE-47.\n== User:\nQuel est le repère fictif que je viens de te donner ?\n== Gemini:\nLe repère fictif que tu m'as donné est : AZUR-CEDRE-47.\n",
+      "role_menu_disabled": true,
+      "duration_seconds": 6.643
+    },
+    {
+      "test": "new_chat_clears_memory_and_view",
+      "passed": true,
+      "selected_role": "Assistant",
+      "role_menu_enabled": true,
+      "question_empty": true,
+      "response_empty": true,
+      "conversation_empty": true,
+      "duration_seconds": 4.083
+    },
+    {
+      "test": "marker_absent_in_new_chat",
+      "passed": true,
+      "role": "Assistant",
+      "question": "Quel repère fictif ai-je donné dans une discussion précédente ? Si tu ne le connais pas, dis-le sans en inventer.",
+      "response": "Je ne connais pas ce repère fictif, car notre conversation commence à l'instant et je n'ai pas accès à l'historique d'éventuelles discussions précédentes (ou tu ne m'en as pas encore donné dans celle-ci).",
+      "conversation": "== User:\nQuel repère fictif ai-je donné dans une discussion précédente ? Si tu ne le connais pas, dis-le sans en inventer.\n== Gemini:\nJe ne connais pas ce repère fictif, car notre conversation commence à l'instant et je n'ai pas accès à l'historique d'éventuelles discussions précédentes (ou tu ne m'en as pas encore donné dans celle-ci).\n",
+      "role_menu_disabled": true,
+      "duration_seconds": 2.975
+    },
+    {
+      "test": "new_chat_before_role_change",
+      "passed": true,
+      "selected_role": "Assistant",
+      "role_menu_enabled": true,
+      "question_empty": true,
+      "response_empty": true,
+      "conversation_empty": true,
+      "duration_seconds": 4.088
+    },
+    {
+      "test": "guide_after_role_change",
+      "passed": true,
+      "role": "Guide touristique",
+      "question": "Rabat",
+      "response": "Welcome to Rabat, the charming and historic capital of Morocco! \n\nIf you are planning a visit, here are the main places you must see:\n\n*   **The Kasbah of the Udayas:** A picturesque 12th-century fortress overlooking the Atlantic Ocean, famous for its winding streets painted in striking shades of blue and white, and its tranquil Andalusian Gardens.\n*   **The Hassan Tower & Mausoleum of Mohammed V:** An iconic unfinished minaret from the 12th century standing alongside the breathtaking, highly ornate marble mausoleum where modern Moroccan kings rest.\n*   **Chellah:** The atmospheric ruins of a medieval fortified Muslim necropolis built over ancient Roman ruins, surrounded by lush gardens and home to nesting storks.\n*   **The Medina:** Rabat's old town, which is much calmer and easier to navigate than those of Marrakech or Fez, perfect for shopping for traditional crafts, textiles, and spices.\n*   **Mohammed VI Museum of Modern and Contemporary Art:** A fantastic stop for art lovers, showcasing the vibrant contemporary art scene of Morocco.\n\n**Average price of a meal:**\nIn Rabat, you can expect to pay around **70 to 150 Moroccan Dirhams (MAD)**—roughly **$7 to $15 USD**—for a standard, satisfying meal at a local restaurant. Street food or casual local eateries (like getting a *tagine* or sandwiches) can cost much less (30–50 MAD / $3–$5), while dining at high-end tourist restaurants will easily cost 250 MAD ($25) or more per person. \n\nEnjoy your trip to this wonderful coastal capital! Let me know if you need recommendations for anything else.",
+      "conversation": "== User:\nRabat\n== Gemini:\nWelcome to Rabat, the charming and historic capital of Morocco! \n\nIf you are planning a visit, here are the main places you must see:\n\n*   **The Kasbah of the Udayas:** A picturesque 12th-century fortress overlooking the Atlantic Ocean, famous for its winding streets painted in striking shades of blue and white, and its tranquil Andalusian Gardens.\n*   **The Hassan Tower & Mausoleum of Mohammed V:** An iconic unfinished minaret from the 12th century standing alongside the breathtaking, highly ornate marble mausoleum where modern Moroccan kings rest.\n*   **Chellah:** The atmospheric ruins of a medieval fortified Muslim necropolis built over ancient Roman ruins, surrounded by lush gardens and home to nesting storks.\n*   **The Medina:** Rabat's old town, which is much calmer and easier to navigate than those of Marrakech or Fez, perfect for shopping for traditional crafts, textiles, and spices.\n*   **Mohammed VI Museum of Modern and Contemporary Art:** A fantastic stop for art lovers, showcasing the vibrant contemporary art scene of Morocco.\n\n**Average price of a meal:**\nIn Rabat, you can expect to pay around **70 to 150 Moroccan Dirhams (MAD)**—roughly **$7 to $15 USD**—for a standard, satisfying meal at a local restaurant. Street food or casual local eateries (like getting a *tagine* or sandwiches) can cost much less (30–50 MAD / $3–$5), while dining at high-end tourist restaurants will easily cost 250 MAD ($25) or more per person. \n\nEnjoy your trip to this wonderful coastal capital! Let me know if you need recommendations for anything else.\n",
+      "role_menu_disabled": true,
+      "duration_seconds": 4.597
+    }
+  ],
+  "status": "passed",
+  "finished_at": "2026-11-10T12:14:39.144801+00:00"
+}

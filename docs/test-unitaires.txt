@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ma.emsi.yassine.atiki.tp2webyassineatiki.llm.LlmClientTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.004 s -- in ma.emsi.yassine.atiki.tp2webyassineatiki.llm.LlmClientTest

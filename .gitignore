@@ -43,3 +43,7 @@ build/
 .env
 .env.*
 *.log
+
+### Validation Python ###
+__pycache__/
+*.pyc
